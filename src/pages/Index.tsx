@@ -1,5 +1,6 @@
 import { Mail, Bot, FileText, MessageSquare, BarChart3, Cog, Users } from "lucide-react"
 import Footer from "@/components/Footer"
+import { trackEmailClick } from "@/utils/analytics"
 
 const services = [
   {
@@ -35,6 +36,10 @@ const services = [
 ]
 
 const Index = () => {
+  const handleEmailClick = () => {
+    trackEmailClick('hola@sonia-hr.com');
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
@@ -45,6 +50,7 @@ const Index = () => {
           </a>
           <a
             href="mailto:hola@sonia-hr.com"
+            onClick={handleEmailClick}
             className="hidden items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 sm:flex"
           >
             <Mail className="h-4 w-4" /> Contactar
@@ -65,6 +71,7 @@ const Index = () => {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <a
               href="mailto:hola@sonia-hr.com"
+              onClick={handleEmailClick}
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition hover:opacity-90"
             >
               <Mail className="h-5 w-5" /> hola@sonia-hr.com
@@ -110,6 +117,7 @@ const Index = () => {
           </p>
           <a
             href="mailto:hola@sonia-hr.com"
+            onClick={handleEmailClick}
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-card px-6 py-3 font-semibold text-foreground transition hover:opacity-90"
           >
             <Mail className="h-5 w-5" /> hola@sonia-hr.com
