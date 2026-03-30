@@ -42,6 +42,12 @@ const Footer = () => {
               <Link to="/politica-privacidad" className="block text-sm text-muted-foreground hover:text-primary hover:underline">
                 Política de Privacidad
               </Link>
+              <Link to="/condiciones-servicio" className="block text-sm text-muted-foreground hover:text-primary hover:underline">
+                Condiciones de Servicio
+              </Link>
+              <Link to="/eliminacion-datos-usuarios" className="block text-sm text-muted-foreground hover:text-primary hover:underline">
+                Eliminación de Datos
+              </Link>
             </div>
           </div>
         </div>
