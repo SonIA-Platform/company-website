@@ -57,7 +57,7 @@ export const CookieConsent = () => {
                 sitio web mediante Google Analytics. Estas cookies nos ayudan a entender cómo los
                 visitantes interactúan con nuestra web para mejorar nuestros servicios.{' '}
                 <a
-                  href="/politica-privacidad"
+                  href="/politica-privacidad.html"
                   className="text-primary hover:underline font-medium"
                 >
                   Más información

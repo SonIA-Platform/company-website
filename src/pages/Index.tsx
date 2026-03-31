@@ -1,5 +1,6 @@
 import { Mail, Bot, FileText, MessageSquare, BarChart3, Cog, Users } from "lucide-react"
 import Footer from "@/components/Footer"
+import Header from "@/components/Header"
 import { trackEmailClick } from "@/utils/analytics"
 
 const services = [
@@ -42,21 +43,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b bg-card">
-        <div className="container mx-auto flex items-center justify-between px-4 py-4">
-          <a href="/" className="text-2xl font-extrabold tracking-tight text-primary">
-            SonIA<span className="font-light text-muted-foreground"> HR</span>
-          </a>
-          <a
-            href="mailto:hola@sonia-hr.com"
-            onClick={handleEmailClick}
-            className="hidden items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90 sm:flex"
-          >
-            <Mail className="h-4 w-4" /> Contactar
-          </a>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero */}
       <section className="bg-card py-20 lg:py-28">

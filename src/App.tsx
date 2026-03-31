@@ -1,9 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Index from './pages/Index'
-import AvisoLegal from './pages/AvisoLegal'
-import PoliticaPrivacidad from './pages/PoliticaPrivacidad'
-import CondicionesServicio from './pages/CondicionesServicio'
-import EliminacionDatosUsuarios from './pages/EliminacionDatosUsuarios'
 import { CookieConsent } from './components/CookieConsent'
 
 function App() {
@@ -11,10 +7,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/aviso-legal" element={<AvisoLegal />} />
-        <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
-        <Route path="/condiciones-servicio" element={<CondicionesServicio />} />
-        <Route path="/eliminacion-datos-usuarios" element={<EliminacionDatosUsuarios />} />
+        <Route path="/aviso-legal" element={<Navigate to="/aviso-legal.html" replace />} />
+        <Route path="/politica-privacidad" element={<Navigate to="/politica-privacidad.html" replace />} />
+        <Route path="/condiciones-servicio" element={<Navigate to="/condiciones-servicio.html" replace />} />
+        <Route path="/eliminacion-datos-usuarios" element={<Navigate to="/eliminacion-datos-usuarios.html" replace />} />
       </Routes>
       <CookieConsent />
     </BrowserRouter>
